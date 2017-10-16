@@ -78,7 +78,7 @@ uint32_t read_sensor(void)
     uint32_t voltage;
 
     voltage = adc1_to_voltage(ADC1_TEST_CHANNEL, &characteristics);
-    printf("%d mV\n", voltage);
+    printf("%d mV\n", voltage*3.6);
     vTaskDelay(100 / portTICK_RATE_MS);
     return voltage;
 }
